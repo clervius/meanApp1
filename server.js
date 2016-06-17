@@ -37,7 +37,7 @@ if(env === "development"){
 
 
 var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error...'));
+db.on('error', console.error.bind(console, 'shit is fucked up - connection error...'));
 db.once('open', function callback(){
     if(env === 'development'){
         console.log('Local db has been opened');
@@ -69,11 +69,5 @@ app.get('*', function(req, res){
 
 // server
 var port = process.env.port || 3030;
-
-
-if(env === "development"){
-    app.listen(port);
-}else {
-    app.listen(50);
-}
+app.listen(port);
 console.log("JC is listening on port " + port + '...');
