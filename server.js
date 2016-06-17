@@ -69,5 +69,11 @@ app.get('*', function(req, res){
 
 // server
 var port = process.env.port || 3030;
-app.listen(port);
+
+
+if(env === "development"){
+    app.listen(port);
+}else {
+    app.listen(50);
+}
 console.log("JC is listening on port " + port + '...');
