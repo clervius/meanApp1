@@ -39,7 +39,11 @@ if(env === "development"){
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error...'));
 db.once('open', function callback(){
-    console.log('Database has been opened')
+    if(env === 'development'){
+        console.log('Local db has been opened');
+    }else{
+        console.log('Mlab db has been opened');
+    }
 });
 
 
