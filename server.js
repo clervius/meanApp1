@@ -46,7 +46,7 @@ db.once('open', function callback(){
     }
 });
 
-
+/*
 var messageSchema = mongoose.Schema({
     message: String
 });
@@ -54,17 +54,15 @@ var Message = mongoose.model('Message', messageSchema);
 var mongoMessage;
 Message.findOne().exec(function(err, messageDoc){
     mongoMessage = messageDoc.message;
-});
+}); */
 
 
 // routes
-app.get('/partials/:partialPath', function(req, res){
-    res.render('partials/' + req.params.partialPath);
+app.get('/partials/*', function(req, res){
+    res.render('../../public/app/' + req.params[0]);
 });
 app.get('*', function(req, res){
-    res.render('index', {
-        mongoMessage: mongoMessage
-    });
+    res.render('index');
 });
 
 // server
