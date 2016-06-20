@@ -14,7 +14,6 @@ angular.module('app').controller('mvMainCtrl', function($scope){
     	{ name: 'lol hello little friend', featured: true, published: new Date('1/12/2013') },
     	{ name: 'The app will collect information and save in db', featured: true, published: new Date('1/12/2013') },
     	{ name: 'hi good guys', featured: true, published: new Date('1/12/2013') },
-    	{ name: 'hi bad guys', featured: true, published: new Date('1/12/2013') },
-
+    	{ name: 'hi bad guys', featured: true, published: new Date('1/12/2013') }
     ]
 });
