@@ -2,5 +2,7 @@
 	.panel-heading.text-center New Courses
 	.pabel-body 
 		.row(ng-repeat="course in courses | filter:orderBy:'published':true | limitTo:10")
-			.col-md-3 {{ course.published | date:'MMM d'}}
-			.col-md-9 {{ course.name }}
+			.col-md-3 
+				p.line {{ course.published | date:'MMM d'}}
+			.col-md-9 
+				p.line {{ course.name }}
